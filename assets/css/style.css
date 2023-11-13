@@ -1,66 +1,84 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-.container{
+.container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.c1, .c2, .c3, .c4, .c5{
+.c1,
+.c2,
+.c3,
+.c4,
+.c5 {
     width: 100%;
     min-width: 150px;
-    height: 150px;
+    height: 20dvh;
+    min-height: 150px;
+    /*
+    `min-height` is important, since it determines a minimum height and this means that the content is 
+    NOT distorted when the user places their mobile device horizontally, for example.
+    */
 }
 
-.c1{
+.c1 {
     background-color: #ff782f;
 }
 
-.c2{
+.c2 {
     background-color: #90ff2f;
 }
 
-.c3{
+.c3 {
     background-color: #2fd5ff;
 }
 
-.c4{
+.c4 {
     background-color: #ff2ff5;
 }
 
-.c5{
+.c5 {
     background-color: #fd3e3e;
 }
 
 @media (min-width: 600px) {
-    .c1{
+
+    .c1,
+    .c2,
+    .c3,
+    .c4,
+    .c5 {
+        height: 25dvh;
+    }
+
+    .c1 {
         width: 25%;
         order: 1;
     }
 
-    .c2{
+    .c2 {
         width: 75%;
         order: 2;
     }
 
-    .c3{
+    .c3 {
         width: 100%;
         order: 3;
     }
 
-    .c4{
+    .c4 {
         width: 100%;
         order: 4;
     }
 
-    .c5{
+    .c5 {
         width: 100%;
         order: 5;
     }
@@ -68,23 +86,32 @@ html{
 }
 
 @media (min-width: 800px) {
-    .c1{
+
+    .c1,
+    .c2,
+    .c3,
+    .c4,
+    .c5 {
+        height: 50dvh;
+    }
+
+    .c1 {
         width: 30%;
     }
 
-    .c2{
+    .c2 {
         width: 40%;
     }
 
-    .c3{
+    .c3 {
         width: 30%;
     }
 
-    .c4{
+    .c4 {
         width: 50%;
     }
 
-    .c5{
+    .c5 {
         width: 50%;
     }
 
